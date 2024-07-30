@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/custom_app_bar.dart';
 import 'widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,7 +8,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      appBar: CustomAppBar(),
       body: HomeViewBody(),
     );
   }
