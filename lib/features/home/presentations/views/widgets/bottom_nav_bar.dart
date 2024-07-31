@@ -14,7 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return CurvedNavigationBar(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: const Color(0xffFFFFFF),
       animationDuration: const Duration(milliseconds: 300),
       items: [
         const Icon(
