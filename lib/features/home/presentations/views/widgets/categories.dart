@@ -19,8 +19,8 @@ class CategoriesWidget extends StatelessWidget {
             child: Column(
               children: [
                 Container(
-                  width: 64, // Fixed width
-                  height: 64, // Fixed height
+                  width: 64,
+                  height: 64,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: const Color(0xff64748B),
@@ -32,8 +32,7 @@ class CategoriesWidget extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32),
                     child: Image.asset(
                       item.imagePath,
-                      fit:
-                          BoxFit.cover, // Ensure the image covers the container
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
