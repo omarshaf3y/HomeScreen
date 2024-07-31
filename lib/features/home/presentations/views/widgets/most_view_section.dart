@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FeaturedSection extends StatelessWidget {
-  const FeaturedSection({
+class MostViewSection extends StatelessWidget {
+  const MostViewSection({
     super.key,
   });
 
@@ -12,7 +12,7 @@ class FeaturedSection extends StatelessWidget {
         const Row(
           children: [
             Text(
-              'Featured',
+              'Most View',
               style: TextStyle(
                 color: Color.fromARGB(255, 2, 49, 137),
                 fontWeight: FontWeight.bold,
@@ -21,7 +21,7 @@ class FeaturedSection extends StatelessWidget {
             ),
             SizedBox(width: 8),
             Text(
-              '10+',
+              '100+',
               style: TextStyle(
                 color: Color(0xff475569),
                 fontSize: 11,
@@ -44,9 +44,9 @@ class FeaturedSection extends StatelessWidget {
           height: 282,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: featuredItems.length,
+            itemCount: mostItems.length,
             itemBuilder: (context, index) {
-              final item = featuredItems[index];
+              final item = mostItems[index];
               return Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Column(
@@ -142,7 +142,7 @@ class FeaturedSection extends StatelessWidget {
   }
 }
 
-class FeaturedItem {
+class MostViewItem {
   final String imagePath;
   final String title;
   final String price;
@@ -150,7 +150,7 @@ class FeaturedItem {
 
   final String date;
 
-  FeaturedItem({
+  MostViewItem({
     required this.imagePath,
     required this.title,
     required this.price,
@@ -159,40 +159,40 @@ class FeaturedItem {
   });
 }
 
-final List<FeaturedItem> featuredItems = [
-  FeaturedItem(
+final List<MostViewItem> mostItems = [
+  MostViewItem(
+    imagePath: 'assets/images/most1.PNG',
+    title: 'Iphone 14 Pro Max',
+    price: '30 000 EG',
+    condition: 'New',
+    date: '22 Sep 2024',
+  ),
+  MostViewItem(
     imagePath: 'assets/images/mac.png',
     title: 'Mac-book 14',
     price: '30 000 EG',
-    condition: 'New',
-    date: '22 Sep 2023',
-  ),
-  FeaturedItem(
-    imagePath: 'assets/images/iphone.png',
-    title: 'Iphone 14 Pro Max',
-    price: '30 000 EG',
     condition: 'Used',
-    date: '22 Sep 2023',
+    date: '22 Sep 2024',
   ),
-  FeaturedItem(
-    imagePath: 'assets/images/mac.png',
-    title: 'Iphone 14 Pro Max',
-    price: '30 000 EG',
+  MostViewItem(
+    imagePath: 'assets/images/most2.PNG',
+    title: 'Airpods',
+    price: '75 000 EG',
     condition: 'Used',
-    date: '22 Sep 2023',
+    date: '22 Sep 2024',
   ),
-  FeaturedItem(
-    imagePath: 'assets/images/iphone.png',
-    title: 'Iphone 14 Pro Max',
-    price: '30 000 EG',
+  MostViewItem(
+    imagePath: 'assets/images/most3.PNG',
+    title: 'Sony 8K Camera',
+    price: '200 000 EG',
     condition: 'Used',
-    date: '22 Sep 2023',
+    date: '22 Sep 2024',
   ),
-  FeaturedItem(
-    imagePath: 'assets/images/mac.png',
-    title: 'Iphone 14 Pro Max',
-    price: '30 000 E£',
+  MostViewItem(
+    imagePath: 'assets/images/most4.PNG',
+    title: 'Sony Ultra Plus Mouse',
+    price: '60 000 EG',
     condition: 'Used',
-    date: '22 Sep 2023',
+    date: '22 Sep 2024',
   ),
 ];
