@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_screen/features/home/presentations/views/widgets/ad_section.dart';
 import 'package:home_screen/features/home/presentations/views/widgets/categories.dart';
 import 'package:home_screen/features/home/presentations/views/widgets/featured_section.dart';
 import 'package:home_screen/features/home/presentations/views/widgets/mobile_section.dart';
@@ -57,6 +58,8 @@ class HomeViewBody extends StatelessWidget {
             FeaturedSection(),
             // ! Mobile
             MobileSection(),
+            // SizedBox(height: 36.38),
+            AdSection(),
           ],
         ),
       ),
