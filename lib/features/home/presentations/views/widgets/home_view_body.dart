@@ -1,44 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:home_screen/features/home/presentations/views/widgets/categories.dart';
+
+import 'location_section.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 45,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                color: const Color.fromARGB(255, 176, 180, 185),
-                width: .5,
-              ),
-            ),
-            child: const Row(
-              children: [
-                Icon(
-                  Icons.location_on_outlined,
-                  color: Color(0xff64748B),
-                  size: 25,
-                ),
-                SizedBox(width: 6),
-                Text(
-                  'Alexandria, Egypt',
-                  style: TextStyle(
-                    fontSize: 15,
-                  ),
-                ),
-                Spacer(flex: 1),
-                Icon(Icons.arrow_forward_ios)
-              ],
-            ),
-          ),
-          const SizedBox(height: 24),
-          const Row(
+          LocationSection(),
+          SizedBox(height: 24),
+          Row(
             children: [
               Text(
                 'Browse Categories',
@@ -68,6 +45,8 @@ class HomeViewBody extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 16),
+          CategoriesWidget(),
         ],
       ),
     );
